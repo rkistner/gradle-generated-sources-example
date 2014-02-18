@@ -1,0 +1,6 @@
+package example;
+
+message TestMessage {
+    optional string message = 1;
+}
+

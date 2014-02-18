@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'ws.antonov.gradle.plugins:gradle-plugin-protobuf:0.8'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'protobuf'
+
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:2.4.1'
+    protobuf files('src/main/protobuf/example.proto')
+}
